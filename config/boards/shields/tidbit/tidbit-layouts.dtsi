@@ -1,5 +1,5 @@
-#include <layouts/common/macropad/position_map.dtsi>
-#include <physical_layouts.dtsi>
+#include "../../layouts/common/macropad/position_map.dtsi"
+#include "../../physical_layouts.dtsi"
 
 / {
     layout_tidbit_19_key: layout_tidbit_19_key {

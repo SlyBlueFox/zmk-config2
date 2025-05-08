@@ -1,0 +1,51 @@
+#include <layouts/common/macropad/position_map.dtsi>
+#include <physical_layouts.dtsi>
+
+/ {
+    layout_tidbit_19_key: layout_tidbit_19_key {
+        compatible = "zmk,physical-layout";
+        display-name = "Tidbit 19 Key Numpad with Encoder";
+
+        keys  //                     w   h    x    y     rot    rx    ry
+            = <&key_physical_attrs 100 100  100    0       0     0     0>  // Numlock
+            , <&key_physical_attrs 100 100  200    0       0     0     0>  // Divide
+            , <&key_physical_attrs 100 100  300    0       0     0     0>  // Asterisk
+            
+            , <&key_physical_attrs 100 100    0  100       0     0     0>  // 7
+            , <&key_physical_attrs 100 100  100  100       0     0     0>  // 8
+            , <&key_physical_attrs 100 100  200  100       0     0     0>  // 9
+            , <&key_physical_attrs 100 100  300  100       0     0     0>  // Minus
+            
+            , <&key_physical_attrs 100 100    0  200       0     0     0>  // 4
+            , <&key_physical_attrs 100 100  100  200       0     0     0>  // 5
+            , <&key_physical_attrs 100 100  200  200       0     0     0>  // 6
+            , <&key_physical_attrs 100 100  300  200       0     0     0>  // Plus
+            
+            , <&key_physical_attrs 100 100    0  300       0     0     0>  // 1
+            , <&key_physical_attrs 100 100  100  300       0     0     0>  // 2
+            , <&key_physical_attrs 100 100  200  300       0     0     0>  // 3
+            , <&key_physical_attrs 100 100  300  300       0     0     0>  // Enter
+            
+            , <&key_physical_attrs 100 100    0  400       0     0     0>  // Function key
+            , <&key_physical_attrs 100 100  100  400       0     0     0>  // 0
+            , <&key_physical_attrs 100 100  200  400       0     0     0>  // Dot
+            , <&key_physical_attrs 100 100  300  400       0     0     0>  // None
+            
+            , <&key_physical_attrs 100 100  400  150     270   400   150>  // Encoder
+            ;
+    };
+};
+
+&layouts_common_macropad_position_map {
+    layout_tidbit_19_key {
+        physical-layout = <&layout_tidbit_19_key>;
+        positions
+            = <                0  1  2>
+            , <3  4  5  6>
+            , <7  8  9  10>
+            , <11 12 13 14>
+            , <15 16 17 18>
+            , <19>             // Encoder
+            ;
+    };
+};

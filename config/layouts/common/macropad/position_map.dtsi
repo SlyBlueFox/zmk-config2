@@ -1,0 +1,7 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+
+/ {
+    layouts_common_macropad_position_map: layouts_common_macropad_position_map {
+        compatible = "zmk,layouts-common-position-map";
+    };
+};

@@ -1,0 +1,5 @@
+#include <dt-bindings/zmk/key-physical-attrs.h>
+
+/ {
+    /* Empty placeholder for compatibility */
+};
